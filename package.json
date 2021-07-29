@@ -1,0 +1,30 @@
+{
+  "name": "lit-heroicons",
+  "version": "0.1.0",
+  "description": "Heroicons for Lit (Project based on heroicons)",
+  "main": "dist/heroicon.js",
+  "repository": {
+    "type": "git"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:icons": "npm run clean && ts-node build.ts",
+    "build:dist": "tsc",
+    "build": "npm run build:icons && npm run build:dist",
+    "clean": "rm -rf generated && rm -rf dist"
+  },
+  "author": "Justin Voitel <justin.voitel@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.0.10",
+    "heroicons": "^0.4.2",
+    "pascalcase": "^1.0.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.2"
+  },
+  "dependencies": {
+    "lit-element": "^2.4.0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "lib": ["esnext"],
+    "rootDir": ".",
+    "sourceRoot": "./generated",
+    "strict": false,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "inlineSources": true,
+    "module": "CommonJS",
+    "target": "es2017",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "declaration": true,
+    "skipLibCheck": true
+  },
+
+  "include": ["generated", "build.ts", ".", "types.d.ts"],
+  "exclude": ["build.ts"]
+}

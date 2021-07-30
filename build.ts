@@ -73,7 +73,9 @@ function generateTemplates() {
   let iconString = "";
 
   Object.keys(svgDict).forEach((name) => {
-    iconString += `${name}: {solid: html\`${svgDict[name]["solid"]}\`, outline: html\`${svgDict[name]["outline"]}\`\n},`;
+    iconString += `${name.toLowerCase()}: {solid: html\`${
+      svgDict[name]["solid"]
+    }\`, outline: html\`${svgDict[name]["outline"]}\`\n},`;
   });
 
   writeFileSync(outputDirIcons, template(iconString));
@@ -92,7 +94,7 @@ function getIconsFromDir(dir: string) {
 }
 
 function transformData(data: string): string {
-  return data.slice(0, 4) + " class='w-8 h-8' part='svg'" + data.slice(4);
+  return data.slice(0, 4) + " class='h-8 w-8' part='svg'" + data.slice(4);
 }
 
 main();

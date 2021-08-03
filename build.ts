@@ -21,11 +21,13 @@ let svgDict = {};
 
 function template(svgString: string) {
   return `
-import { html, TemplateResult } from "lit-element";
+import { html, TemplateResult } from "lit";
 
-export type ${iconTypeName} = ${Object.keys(svgDict)
+export const iconNames = [${Object.keys(svgDict)
     .map((name) => `'${name}'`)
-    .join(" | ")}
+    .join(",")}] as const
+
+export type ${iconTypeName} = typeof iconNames[number]
 
 interface ${iconsInterfaceName} {
   [key: string]: {
@@ -94,7 +96,7 @@ function getIconsFromDir(dir: string) {
 }
 
 function transformData(data: string): string {
-  return data.slice(0, 4) + " class='h-8 w-8' part='svg'" + data.slice(4);
+  return data.slice(0, 4) + " part='svg'" + data.slice(4);
 }
 
 main();

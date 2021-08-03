@@ -1,6 +1,6 @@
 {
   "name": "lit-heroicons",
-  "version": "0.6.0",
+  "version": "0.9.0",
   "description": "Heroicons for Lit (Project based on heroicons)",
   "main": "heroicon.ts",
   "module": "heroicon.ts",

@@ -1,5 +1,5 @@
-import { css, html, LitElement } from "lit";
-import { customElement, property } from "lit/decorators";
+import { html, LitElement } from "lit";
+import { customElement, property } from "lit/decorators.js";
 import { HeroIconName, icons } from "./generated/heroicons";
 
 type HeroIconSize = "full" | "s" | "m" | "l";
@@ -12,10 +12,13 @@ export class Heroicon extends LitElement {
   solid = false;
 
   render() {
-    return (
-      icons?.[this.name?.toLowerCase()]?.[this.solid ? "solid" : "outline"] ??
-      html`<svg></svg>`
-    );
+    return html`
+      <span>
+        ${icons?.[this.name?.toLowerCase()]?.[
+          this.solid ? "solid" : "outline"
+        ] ?? html`<svg></svg>`}
+      </span>
+    `;
   }
 
   createRenderRoot() {

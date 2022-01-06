@@ -1,6 +1,6 @@
 {
   "name": "lit-heroicons",
-  "version": "0.9.0",
+  "version": "0.10.1",
   "description": "Heroicons for Lit (Project based on heroicons)",
   "main": "heroicon.ts",
   "module": "heroicon.ts",
@@ -21,9 +21,9 @@
   "author": "Justin Voitel <justin.voitel@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^16.4.7",
+    "@types/node": "^17.0.8",
     "pascalcase": "1.0.0",
-    "heroicons": "^1.0.2",
+    "heroicons": "^1.0.5",
     "ts-node": "^10.1.0",
     "typescript": "^4.3.5"
   },
